@@ -1,0 +1,87 @@
+/* 全局样式 */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* 控件容器样式 */
+#controls {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 控件行样式 */
+.control-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* 每个控件标签和控件之间的间距 */
+.control-row label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* 输入框和下拉菜单样式 */
+#controls select,
+#controls input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+}
+
+/* 按钮样式 */
+#controls button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #007bff;
+  font-size: 1em;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* 按钮组样式 */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* 按钮悬停效果 */
+#controls button:hover {
+  background-color: #0056b3;
+}
+
+/* SVG 图像容器样式 */
+#plot {
+  margin: 0;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
