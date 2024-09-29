@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Flask KMeans Application CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Set Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Install
+    - name: Install dependencies using Makefile
+      run: make install
+
+    # Run Flask 
+    - name: Run the Flask application
+      run: |
+        make run &
+        sleep 15 
+
+    # Test Flask 
+    - name: Test if Flask server is running
+      run: curl -f http://localhost:3000 || exit 1
